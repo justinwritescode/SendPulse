@@ -1,0 +1,20 @@
+<!--
+ * SendPulse.Identity.props
+ * 
+ *   Created: 2022-11-27-08:02:38
+ *   Modified: 2022-11-27-08:02:38
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<ItemGroup>
+		<Using Include="JustinWritesCode.SendPulse.Identity.Constants" Static="true" />
+		<Using Include="JustinWritesCode.SendPulse.Identity.Constants.Uris" Static="true" />
+		<Using Include="JustinWritesCode.SendPulse.Identity.Constants.Strings" Static="true" />
+		<Using Include="JustinWritesCode.SendPulse.Identity.Constants.UriFragments" Static="true" />
+	</ItemGroup>
+</Project>
