@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <Authors>Justin Chase &lt;justin@justinwritescode.com&gt;</Authors>
+		<Owners>$(Authors)</Owners>
+    <Copyright>© 2002 Justin Chase, All Rights Reserved</Copyright>
+    <RootNamespace>SendPulse.Api</RootNamespace>
+	  <Company>JustinWritesCode</Company>    
+		<OutputType>Library</OutputType>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+	<PropertyGroup>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="NuGetizer" Version="[0.9.0,)" />
+		<PackageReference Include="MinVer" Version="[4.1.0,)" />
+	</ItemGroup>
+</Project>
