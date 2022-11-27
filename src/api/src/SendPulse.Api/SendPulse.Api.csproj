@@ -12,17 +12,20 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>SendPulse.Api</RootNamespace>
+		<TargetFramework>net6.0</TargetFramework>
+		<TargetFrameworks>net6.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="105.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="JsonSubTypes" Version="1.2.0" />
-		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="RestSharp" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="JsonSubTypes" />
+		<PackageReference Include="System.ComponentModel" />
+		<PackageReference Include="System.Xml.XDocument" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System" />
+    <!-- <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -30,7 +33,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml" /> -->
   </ItemGroup>
 
 </Project>

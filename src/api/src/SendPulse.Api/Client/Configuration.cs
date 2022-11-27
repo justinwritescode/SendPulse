@@ -231,7 +231,7 @@ namespace SendPulse.Api.Client
                 _basePath = value;
                 // pass-through to ApiClient if it's set.
                 if(_apiClient != null) {
-                    _apiClient.RestClient.BaseUrl = new Uri(_basePath);
+                    _apiClient.RestClient.Options!.BaseUrl = new Uri(_basePath);
                 }
             }
         }
@@ -256,7 +256,7 @@ namespace SendPulse.Api.Client
                 }
                 else
                 {
-                    return ApiClient.RestClient.Timeout;
+                    return ApiClient.RestClient.Options.MaxTimeout;
                 }
             }
             set
@@ -264,7 +264,7 @@ namespace SendPulse.Api.Client
                 _timeout = value;
                 if (_apiClient != null)
                 {
-                    ApiClient.RestClient.Timeout = _timeout;
+                    ApiClient.RestClient.Options.MaxTimeout = _timeout;
                 }
             }
         }
