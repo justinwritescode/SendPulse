@@ -72,9 +72,9 @@ namespace SendPulse.Api.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://api.sendpulse.com/telegram")
+        public ApiClient(string basePath = "https://api.sendpulse.com/telegram")
         {
-           if (String.IsNullOrEmpty(basePath))
+           if (string.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
 
             RestClient = new RestClient(basePath);
@@ -107,10 +107,10 @@ namespace SendPulse.Api.Client
 
         // Creates and sets up a RestRequest prior to a call.
         private RestRequest PrepareRequest(
-            String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
-            Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
-            Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
-            String contentType)
+            string path, RestSharp.Method method, List<KeyValuePair<string, string>> queryParams, Object postBody,
+            Dictionary<string, string> headerParams, Dictionary<string, string> formParams,
+            Dictionary<string, FileParameter> fileParams, Dictionary<string, string> pathParams,
+            string contentType)
         {
             var request = new RestRequest(path, method);
 
@@ -158,10 +158,10 @@ namespace SendPulse.Api.Client
         /// <param name="contentType">Content Type of the request</param>
         /// <returns>Object</returns>
         public Object CallApi(
-            String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
-            Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
-            Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
-            String contentType)
+            string path, RestSharp.Method method, List<KeyValuePair<string, string>> queryParams, Object postBody,
+            Dictionary<string, string> headerParams, Dictionary<string, string> formParams,
+            Dictionary<string, FileParameter> fileParams, Dictionary<string, string> pathParams,
+            string contentType)
         {
             var request = PrepareRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
@@ -193,10 +193,10 @@ namespace SendPulse.Api.Client
         /// <param name="contentType">Content type.</param>
         /// <returns>The Task instance.</returns>
         public async System.Threading.Tasks.Task<Object> CallApiAsync(
-            String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
-            Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
-            Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
-            String contentType)
+            string path, RestSharp.Method method, List<KeyValuePair<string, string>> queryParams, Object postBody,
+            Dictionary<string, string> headerParams, Dictionary<string, string> formParams,
+            Dictionary<string, FileParameter> fileParams, Dictionary<string, string> pathParams,
+            string contentType)
         {
             var request = PrepareRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
@@ -210,7 +210,7 @@ namespace SendPulse.Api.Client
         /// <summary>
         /// Escape string (url-encoded).
         /// </summary>
-        /// <param name="str">String to be escaped.</param>
+        /// <param name="str">string to be escaped.</param>
         /// <returns>Escaped string.</returns>
         public string EscapeString(string str)
         {
@@ -291,7 +291,7 @@ namespace SendPulse.Api.Client
             {
                 if (headers != null)
                 {
-                    var filePath = String.IsNullOrEmpty(Configuration.TempFolderPath)
+                    var filePath = string.IsNullOrEmpty(Configuration.TempFolderPath)
                         ? Path.GetTempPath()
                         : Configuration.TempFolderPath;
                     var regex = new Regex(@"Content-Disposition=.*filename=['""]?([^'""\s]+)['""]?$");
@@ -315,7 +315,7 @@ namespace SendPulse.Api.Client
                 return DateTime.Parse(response.Content,  null, System.Globalization.DateTimeStyles.RoundtripKind);
             }
 
-            if (type == typeof(String) || type.Name.StartsWith("System.Nullable")) // return primitive type
+            if (type == typeof(string) || type.Name.StartsWith("System.Nullable")) // return primitive type
             {
                 return ConvertType(response.Content, type);
             }
@@ -336,7 +336,7 @@ namespace SendPulse.Api.Client
         /// </summary>
         /// <param name="obj">Object.</param>
         /// <returns>JSON string.</returns>
-        public String Serialize(object obj)
+        public string Serialize(object obj)
         {
             try
             {
@@ -358,7 +358,7 @@ namespace SendPulse.Api.Client
         /// </summary>
         /// <param name="mime">MIME</param>
         /// <returns>Returns True if MIME type is json.</returns>
-        public bool IsJsonMime(String mime)
+        public bool IsJsonMime(string mime)
         {
             var jsonRegex = new Regex("(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$");
             return mime != null && (jsonRegex.IsMatch(mime) || mime.Equals("application/json-patch+json"));
@@ -371,7 +371,7 @@ namespace SendPulse.Api.Client
         /// </summary>
         /// <param name="contentTypes">The Content-Type array to select from.</param>
         /// <returns>The Content-Type header to use.</returns>
-        public String SelectHeaderContentType(String[] contentTypes)
+        public string SelectHeaderContentType(string[] contentTypes)
         {
             if (contentTypes.Length == 0)
                 return "application/json";
@@ -392,7 +392,7 @@ namespace SendPulse.Api.Client
         /// </summary>
         /// <param name="accepts">The accepts array to select from.</param>
         /// <returns>The Accept header to use.</returns>
-        public String SelectHeaderAccept(String[] accepts)
+        public string SelectHeaderAccept(string[] accepts)
         {
             if (accepts.Length == 0)
                 return null;
@@ -400,13 +400,13 @@ namespace SendPulse.Api.Client
             if (accepts.Contains("application/json", StringComparer.OrdinalIgnoreCase))
                 return "application/json";
 
-            return String.Join(",", accepts);
+            return string.Join(",", accepts);
         }
 
         /// <summary>
         /// Encode string in base64 format.
         /// </summary>
-        /// <param name="text">String to be encoded.</param>
+        /// <param name="text">string to be encoded.</param>
         /// <returns>Encoded string.</returns>
         public static string Base64Encode(string text)
         {
@@ -447,7 +447,7 @@ namespace SendPulse.Api.Client
         /// URL encode a string
         /// Credit/Ref: https://github.com/restsharp/RestSharp/blob/master/RestSharp/Extensions/StringExtensions.cs#L50
         /// </summary>
-        /// <param name="input">String to be URL encoded</param>
+        /// <param name="input">string to be URL encoded</param>
         /// <returns>Byte array</returns>
         public static string UrlEncode(string input)
         {

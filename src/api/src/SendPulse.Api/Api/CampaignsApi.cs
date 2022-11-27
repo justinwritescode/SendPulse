@@ -81,7 +81,7 @@ namespace SendPulse.Api
         /// Initializes a new instance of the <see cref="CampaignsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public CampaignsApi(String basePath)
+        public CampaignsApi(string basePath)
         {
             this.Configuration = new SendPulse.Api.Client.Configuration { BasePath = basePath };
 
@@ -119,7 +119,7 @@ namespace SendPulse.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        public string GetBasePath()
         {
             return this.Configuration.ApiClient.RestClient.Options!.BaseUrl.ToString();
         }
@@ -129,7 +129,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <value>The base path</value>
         [Obsolete("SetBasePath is deprecated, please do 'Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
-        public void SetBasePath(String basePath)
+        public void SetBasePath(string basePath)
         {
             // do nothing
         }
@@ -161,7 +161,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <returns>Dictionary of HTTP header</returns>
         [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
-        public IDictionary<String, String> DefaultHeader()
+        public IDictionary<string, string> DefaultHeader()
         {
             return new ReadOnlyDictionary<string, string>(this.Configuration.DefaultHeader);
         }
@@ -203,24 +203,24 @@ namespace SendPulse.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling CampaignsApi->CampaignsSendPost");
 
             var localVarPath = "/campaigns/send";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
+            var localVarPathParams = new Dictionary<string, string>();
+            var localVarQueryParams = new List<KeyValuePair<string, string>>();
+            var localVarHeaderParams = new Dictionary<string, string>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<string, string>();
+            var localVarFileParams = new Dictionary<string, FileParameter>();
             Object localVarPostBody = null;
 
             // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
+            string[] localVarHttpContentTypes = new string[] {
                 "application/json"
             };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
+            string[] localVarHttpHeaderAccepts = new string[] {
                 "application/json"
             };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -234,7 +234,7 @@ namespace SendPulse.Api
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
@@ -283,24 +283,24 @@ namespace SendPulse.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling CampaignsApi->CampaignsSendPost");
 
             var localVarPath = "/campaigns/send";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
+            var localVarPathParams = new Dictionary<string, string>();
+            var localVarQueryParams = new List<KeyValuePair<string, string>>();
+            var localVarHeaderParams = new Dictionary<string, string>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<string, string>();
+            var localVarFileParams = new Dictionary<string, FileParameter>();
             Object localVarPostBody = null;
 
             // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
+            string[] localVarHttpContentTypes = new string[] {
                 "application/json"
             };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
+            string[] localVarHttpHeaderAccepts = new string[] {
                 "application/json"
             };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -314,7 +314,7 @@ namespace SendPulse.Api
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }

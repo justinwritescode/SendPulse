@@ -39,7 +39,7 @@ namespace SendPulse.Api.Model
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
-        /// <returns>String presentation of the object</returns>
+        /// <returns>string presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
