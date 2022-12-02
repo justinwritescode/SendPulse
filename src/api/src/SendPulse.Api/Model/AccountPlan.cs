@@ -1,7 +1,7 @@
-/* 
+/*
  * Telegram service API
  *
- * Using the API for Telegram chatbots, you can integrate your system with SendPulse’s chatbots service and get detailed information about your account, bots, subscribers, variables, flows, and chats. You can also create campaigns, launch flows, assign and remove variables and tags.               On the right, there is a button for authorizing requests made on this page. Click “Authorize,” then insert the ID and Secret from your account.               To perform a request directly from the page, click the \"Try it out\" button within each method block. Then fill in input fields if any (for URL parameters, the description is right below the URL request; for body parameters, the description is under the “Scheme” button to the right of the example), and click “Run.” You'll find the server response and description of received parameters below.         
+ * Using the API for Telegram chatbots, you can integrate your system with SendPulse’s chatbots service and get detailed information about your account, bots, subscribers, variables, flows, and chats. You can also create campaigns, launch flows, assign and remove variables and tags.               On the right, there is a button for authorizing requests made on this page. Click “Authorize,” then insert the ID and Secret from your account.               To perform a request directly from the page, click the \"Try it out\" button within each method block. Then fill in input fields if any (for URL parameters, the description is right below the URL request; for body parameters, the description is under the “Scheme” button to the right of the example), and click “Run.” You'll find the server response and description of received parameters below.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: justin@justinwritescode.com
@@ -55,7 +55,7 @@ namespace SendPulse.Api.Model
             this.IsExpired = isExpired;
             this.ExpiredAt = expiredAt;
         }
-        
+
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
@@ -137,7 +137,7 @@ namespace SendPulse.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -167,52 +167,52 @@ namespace SendPulse.Api.Model
             if (input == null)
                 return false;
 
-            return 
+            return
                 (
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
-                ) && 
+                ) &&
                 (
                     this.MaxBots == input.MaxBots ||
                     (this.MaxBots != null &&
                     this.MaxBots.Equals(input.MaxBots))
-                ) && 
+                ) &&
                 (
                     this.MaxContacts == input.MaxContacts ||
                     (this.MaxContacts != null &&
                     this.MaxContacts.Equals(input.MaxContacts))
-                ) && 
+                ) &&
                 (
                     this.MaxMessages == input.MaxMessages ||
                     (this.MaxMessages != null &&
                     this.MaxMessages.Equals(input.MaxMessages))
-                ) && 
+                ) &&
                 (
                     this.MaxTags == input.MaxTags ||
                     (this.MaxTags != null &&
                     this.MaxTags.Equals(input.MaxTags))
-                ) && 
+                ) &&
                 (
                     this.MaxVariables == input.MaxVariables ||
                     (this.MaxVariables != null &&
                     this.MaxVariables.Equals(input.MaxVariables))
-                ) && 
+                ) &&
                 (
                     this.Branding == input.Branding ||
                     (this.Branding != null &&
                     this.Branding.Equals(input.Branding))
-                ) && 
+                ) &&
                 (
                     this.IsExceeded == input.IsExceeded ||
                     (this.IsExceeded != null &&
                     this.IsExceeded.Equals(input.IsExceeded))
-                ) && 
+                ) &&
                 (
                     this.IsExpired == input.IsExpired ||
                     (this.IsExpired != null &&
                     this.IsExpired.Equals(input.IsExpired))
-                ) && 
+                ) &&
                 (
                     this.ExpiredAt == input.ExpiredAt ||
                     (this.ExpiredAt != null &&

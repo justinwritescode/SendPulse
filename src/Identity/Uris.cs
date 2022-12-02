@@ -15,9 +15,10 @@ namespace JustinWritesCode.SendPulse.Identity;
 
 public static partial class Constants
 {
-	public static partial class Uris
-	{
-		public static readonly Uri SendPulseApiBaseUri = new (Strings.SendPulseApiBaseUriString);
-		public static readonly Uri SendPulseOAuth2Uri = new(Strings.SendPulseOAuth2UriString);
-	}
+    public static partial class Uris
+    {
+        public static readonly Uri SendPulseApiBaseUri = new (Strings.SendPulseApiBaseUriString);
+        public static readonly Uri SendPulseOAuth2Uri = new(Strings.SendPulseOAuth2UriString);
+        
+    }
 }

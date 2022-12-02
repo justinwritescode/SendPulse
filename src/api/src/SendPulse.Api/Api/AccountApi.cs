@@ -20,7 +20,7 @@ namespace SendPulse.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        internal interface IAccountApi : IApiAccessor
+    internal interface IAccountApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -31,7 +31,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse20011</returns>
-        InlineResponse20011 AccountGet ();
+        AccountInfo AccountGet ();
 
         /// <summary>
         /// Get account info
@@ -41,7 +41,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse20011</returns>
-        ApiResponse<InlineResponse20011> AccountGetWithHttpInfo ();
+        ApiResponse<AccountInfo> AccountGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,7 +52,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse20011</returns>
-        System.Threading.Tasks.Task<InlineResponse20011> AccountGetAsync ();
+        System.Threading.Tasks.Task<AccountInfo> AccountGetAsync ();
 
         /// <summary>
         /// Get account info
@@ -62,7 +62,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> AccountGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<AccountInfo>> AccountGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -179,9 +179,9 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse20011</returns>
-        public InlineResponse20011 AccountGet ()
+        public AccountInfo AccountGet ()
         {
-             ApiResponse<InlineResponse20011> localVarResponse = AccountGetWithHttpInfo();
+             ApiResponse<AccountInfo> localVarResponse = AccountGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -190,7 +190,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse20011</returns>
-        public ApiResponse< InlineResponse20011 > AccountGetWithHttpInfo ()
+        public ApiResponse< AccountInfo > AccountGetWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -234,9 +234,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<AccountInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (AccountInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountInfo)));
         }
 
         /// <summary>
@@ -244,9 +244,9 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse20011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20011> AccountGetAsync ()
+        public async System.Threading.Tasks.Task<AccountInfo> AccountGetAsync ()
         {
-             ApiResponse<InlineResponse20011> localVarResponse = await AccountGetAsyncWithHttpInfo();
+             ApiResponse<AccountInfo> localVarResponse = await AccountGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -256,7 +256,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse20011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20011>> AccountGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<AccountInfo>> AccountGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -300,9 +300,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse20011>(localVarStatusCode,
+            return new ApiResponse<AccountInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse20011) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20011)));
+                (AccountInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountInfo)));
         }
 
     }

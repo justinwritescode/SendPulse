@@ -20,7 +20,7 @@ namespace SendPulse.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        internal interface IBotsApi : IApiAccessor
+    internal interface IBotsApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -31,7 +31,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2005</returns>
-        InlineResponse2005 BotsGet ();
+        GetAllBotsResponse BotsGet ();
 
         /// <summary>
         /// Get a list of connected bots
@@ -41,7 +41,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2005</returns>
-        ApiResponse<InlineResponse2005> BotsGetWithHttpInfo ();
+        ApiResponse<GetAllBotsResponse> BotsGetWithHttpInfo ();
         /// <summary>
         /// Get general statistics info by bot
         /// </summary>
@@ -51,7 +51,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2006</returns>
-        InlineResponse2006 BotsStatisticsGet (string botId);
+        GetBotStatisticsResponse BotsStatisticsGet (string botId);
 
         /// <summary>
         /// Get general statistics info by bot
@@ -62,7 +62,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse2006</returns>
-        ApiResponse<InlineResponse2006> BotsStatisticsGetWithHttpInfo (string botId);
+        ApiResponse<GetBotStatisticsResponse> BotsStatisticsGetWithHttpInfo (string botId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -73,7 +73,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2005</returns>
-        System.Threading.Tasks.Task<InlineResponse2005> BotsGetAsync ();
+        System.Threading.Tasks.Task<GetAllBotsResponse> BotsGetAsync ();
 
         /// <summary>
         /// Get a list of connected bots
@@ -83,7 +83,7 @@ namespace SendPulse.Api
         /// </remarks>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> BotsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<GetAllBotsResponse>> BotsGetAsyncWithHttpInfo ();
         /// <summary>
         /// Get general statistics info by bot
         /// </summary>
@@ -93,7 +93,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse2006</returns>
-        System.Threading.Tasks.Task<InlineResponse2006> BotsStatisticsGetAsync (string botId);
+        System.Threading.Tasks.Task<GetBotStatisticsResponse> BotsStatisticsGetAsync (string botId);
 
         /// <summary>
         /// Get general statistics info by bot
@@ -104,7 +104,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> BotsStatisticsGetAsyncWithHttpInfo (string botId);
+        System.Threading.Tasks.Task<ApiResponse<GetBotStatisticsResponse>> BotsStatisticsGetAsyncWithHttpInfo (string botId);
         #endregion Asynchronous Operations
     }
 
@@ -221,9 +221,9 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2005</returns>
-        public InlineResponse2005 BotsGet ()
+        public GetAllBotsResponse BotsGet ()
         {
-             ApiResponse<InlineResponse2005> localVarResponse = BotsGetWithHttpInfo();
+             ApiResponse<GetAllBotsResponse> localVarResponse = BotsGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -232,7 +232,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2005</returns>
-        public ApiResponse< InlineResponse2005 > BotsGetWithHttpInfo ()
+        public ApiResponse< GetAllBotsResponse > BotsGetWithHttpInfo ()
         {
 
             var localVarPath = "/bots";
@@ -276,9 +276,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<GetAllBotsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (GetAllBotsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllBotsResponse)));
         }
 
         /// <summary>
@@ -286,9 +286,9 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2005</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2005> BotsGetAsync ()
+        public async System.Threading.Tasks.Task<GetAllBotsResponse> BotsGetAsync ()
         {
-             ApiResponse<InlineResponse2005> localVarResponse = await BotsGetAsyncWithHttpInfo();
+             ApiResponse<GetAllBotsResponse> localVarResponse = await BotsGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -298,7 +298,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> BotsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<GetAllBotsResponse>> BotsGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/bots";
@@ -342,9 +342,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<GetAllBotsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2005) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (GetAllBotsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetAllBotsResponse)));
         }
 
         /// <summary>
@@ -353,9 +353,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2006</returns>
-        public InlineResponse2006 BotsStatisticsGet (string botId)
+        public GetBotStatisticsResponse BotsStatisticsGet (string botId)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = BotsStatisticsGetWithHttpInfo(botId);
+             ApiResponse<GetBotStatisticsResponse> localVarResponse = BotsStatisticsGetWithHttpInfo(botId);
              return localVarResponse.Data;
         }
 
@@ -365,7 +365,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse2006</returns>
-        public ApiResponse< InlineResponse2006 > BotsStatisticsGetWithHttpInfo (string botId)
+        public ApiResponse< GetBotStatisticsResponse > BotsStatisticsGetWithHttpInfo (string botId)
         {
             // verify the required parameter 'botId' is set
             if (botId == null)
@@ -413,9 +413,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<GetBotStatisticsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2006) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (GetBotStatisticsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetBotStatisticsResponse)));
         }
 
         /// <summary>
@@ -424,9 +424,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse2006</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2006> BotsStatisticsGetAsync (string botId)
+        public async System.Threading.Tasks.Task<GetBotStatisticsResponse> BotsStatisticsGetAsync (string botId)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = await BotsStatisticsGetAsyncWithHttpInfo(botId);
+             ApiResponse<GetBotStatisticsResponse> localVarResponse = await BotsStatisticsGetAsyncWithHttpInfo(botId);
              return localVarResponse.Data;
 
         }
@@ -437,7 +437,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">The bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> BotsStatisticsGetAsyncWithHttpInfo (string botId)
+        public async System.Threading.Tasks.Task<ApiResponse<GetBotStatisticsResponse>> BotsStatisticsGetAsyncWithHttpInfo (string botId)
         {
             // verify the required parameter 'botId' is set
             if (botId == null)
@@ -485,9 +485,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<GetBotStatisticsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2006) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (GetBotStatisticsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetBotStatisticsResponse)));
         }
 
     }

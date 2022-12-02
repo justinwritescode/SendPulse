@@ -159,7 +159,7 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ContactsGetByTagGet (string tag, string botId);
+        ContactsReceived ContactsGetByTagGet (string tag, string botId);
 
         /// <summary>
         /// Get a list of contacts by tag
@@ -171,7 +171,7 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ContactsGetByTagGetWithHttpInfo (string tag, string botId);
+        ApiResponse<ContactsReceived> ContactsGetByTagGetWithHttpInfo (string tag, string botId);
         /// <summary>
         /// Get contacts by variable
         /// </summary>
@@ -184,7 +184,7 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ContactsGetByVariableGet (string variableValue, string variableId = null, string variableName = null, string botId = null);
+        ContactsReceived ContactsGetByVariableGet (string variableValue, string variableId = null, string variableName = null, string botId = null);
 
         /// <summary>
         /// Get contacts by variable
@@ -198,7 +198,7 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ContactsGetByVariableGetWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null);
+        ApiResponse<ContactsReceived> ContactsGetByVariableGetWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null);
         /// <summary>
         /// Get contact info via a contact ID
         /// </summary>
@@ -208,7 +208,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse200</returns>
-        InlineResponse200 ContactsGetGet (string id);
+        ContactReceived ContactsGetGet (string id);
 
         /// <summary>
         /// Get contact info via a contact ID
@@ -219,7 +219,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> ContactsGetGetWithHttpInfo (string id);
+        ApiResponse<ContactReceived> ContactsGetGetWithHttpInfo (string id);
         /// <summary>
         /// Get remaining time for automation pause
         /// </summary>
@@ -250,7 +250,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 ContactsMarkReadPut (string contactId = null);
+        MarkReadResult ContactsMarkReadPut (string contactId = null);
 
         /// <summary>
         /// Mark messages as read
@@ -261,7 +261,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> ContactsMarkReadPutWithHttpInfo (string contactId = null);
+        ApiResponse<MarkReadResult> ContactsMarkReadPutWithHttpInfo (string contactId = null);
         /// <summary>
         /// Send a message to a contact
         /// </summary>
@@ -505,7 +505,7 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ContactsGetByTagGetAsync (string tag, string botId);
+        System.Threading.Tasks.Task<ContactsReceived> ContactsGetByTagGetAsync (string tag, string botId);
 
         /// <summary>
         /// Get a list of contacts by tag
@@ -517,7 +517,7 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ContactsGetByTagGetAsyncWithHttpInfo (string tag, string botId);
+        System.Threading.Tasks.Task<ApiResponse<ContactsReceived>> ContactsGetByTagGetAsyncWithHttpInfo (string tag, string botId);
         /// <summary>
         /// Get contacts by variable
         /// </summary>
@@ -530,7 +530,7 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ContactsGetByVariableGetAsync (string variableValue, string variableId = null, string variableName = null, string botId = null);
+        System.Threading.Tasks.Task<ContactsReceived> ContactsGetByVariableGetAsync (string variableValue, string variableId = null, string variableName = null, string botId = null);
 
         /// <summary>
         /// Get contacts by variable
@@ -544,7 +544,7 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ContactsGetByVariableGetAsyncWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactsReceived>> ContactsGetByVariableGetAsyncWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null);
         /// <summary>
         /// Get contact info via a contact ID
         /// </summary>
@@ -554,7 +554,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> ContactsGetGetAsync (string id);
+        System.Threading.Tasks.Task<ContactReceived> ContactsGetGetAsync (string id);
 
         /// <summary>
         /// Get contact info via a contact ID
@@ -565,7 +565,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ContactsGetGetAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<ContactReceived>> ContactsGetGetAsyncWithHttpInfo (string id);
         /// <summary>
         /// Get remaining time for automation pause
         /// </summary>
@@ -596,7 +596,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> ContactsMarkReadPutAsync (string contactId = null);
+        System.Threading.Tasks.Task<MarkReadResult> ContactsMarkReadPutAsync (string contactId = null);
 
         /// <summary>
         /// Mark messages as read
@@ -607,7 +607,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ContactsMarkReadPutAsyncWithHttpInfo (string contactId = null);
+        System.Threading.Tasks.Task<ApiResponse<MarkReadResult>> ContactsMarkReadPutAsyncWithHttpInfo (string contactId = null);
         /// <summary>
         /// Send a message to a contact
         /// </summary>
@@ -887,8 +887,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -969,8 +969,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1050,8 +1050,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1132,8 +1132,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1213,8 +1213,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1295,8 +1295,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1376,8 +1376,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1458,8 +1458,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1539,8 +1539,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1621,8 +1621,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1702,8 +1702,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1784,8 +1784,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1809,9 +1809,9 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ContactsGetByTagGet (string tag, string botId)
+        public ContactsReceived ContactsGetByTagGet (string tag, string botId)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ContactsGetByTagGetWithHttpInfo(tag, botId);
+             ApiResponse<ContactsReceived> localVarResponse = ContactsGetByTagGetWithHttpInfo(tag, botId);
              return localVarResponse.Data;
         }
 
@@ -1822,7 +1822,7 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ContactsGetByTagGetWithHttpInfo (string tag, string botId)
+        public ApiResponse< ContactsReceived > ContactsGetByTagGetWithHttpInfo (string tag, string botId)
         {
             // verify the required parameter 'tag' is set
             if (tag == null)
@@ -1863,8 +1863,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1876,9 +1876,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ContactsReceived>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ContactsReceived) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsReceived)));
         }
 
         /// <summary>
@@ -1888,9 +1888,9 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ContactsGetByTagGetAsync (string tag, string botId)
+        public async System.Threading.Tasks.Task<ContactsReceived> ContactsGetByTagGetAsync (string tag, string botId)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ContactsGetByTagGetAsyncWithHttpInfo(tag, botId);
+             ApiResponse<ContactsReceived> localVarResponse = await ContactsGetByTagGetAsyncWithHttpInfo(tag, botId);
              return localVarResponse.Data;
 
         }
@@ -1902,7 +1902,7 @@ namespace SendPulse.Api
         /// <param name="tag">Created contact’s tag to search by</param>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ContactsGetByTagGetAsyncWithHttpInfo (string tag, string botId)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsReceived>> ContactsGetByTagGetAsyncWithHttpInfo (string tag, string botId)
         {
             // verify the required parameter 'tag' is set
             if (tag == null)
@@ -1943,8 +1943,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1956,9 +1956,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ContactsReceived>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ContactsReceived) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsReceived)));
         }
 
         /// <summary>
@@ -1970,9 +1970,9 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ContactsGetByVariableGet (string variableValue, string variableId = null, string variableName = null, string botId = null)
+        public ContactsReceived ContactsGetByVariableGet (string variableValue, string variableId = null, string variableName = null, string botId = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ContactsGetByVariableGetWithHttpInfo(variableValue, variableId, variableName, botId);
+             ApiResponse<ContactsReceived> localVarResponse = ContactsGetByVariableGetWithHttpInfo(variableValue, variableId, variableName, botId);
              return localVarResponse.Data;
         }
 
@@ -1985,7 +1985,7 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ContactsGetByVariableGetWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null)
+        public ApiResponse< ContactsReceived > ContactsGetByVariableGetWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null)
         {
             // verify the required parameter 'variableValue' is set
             if (variableValue == null)
@@ -2025,8 +2025,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2038,9 +2038,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ContactsReceived>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ContactsReceived) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsReceived)));
         }
 
         /// <summary>
@@ -2052,9 +2052,9 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ContactsGetByVariableGetAsync (string variableValue, string variableId = null, string variableName = null, string botId = null)
+        public async System.Threading.Tasks.Task<ContactsReceived> ContactsGetByVariableGetAsync (string variableValue, string variableId = null, string variableName = null, string botId = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ContactsGetByVariableGetAsyncWithHttpInfo(variableValue, variableId, variableName, botId);
+             ApiResponse<ContactsReceived> localVarResponse = await ContactsGetByVariableGetAsyncWithHttpInfo(variableValue, variableId, variableName, botId);
              return localVarResponse.Data;
 
         }
@@ -2068,7 +2068,7 @@ namespace SendPulse.Api
         /// <param name="variableName">Contact’s variable name to search by; required parameter and passed with the bot_id parameter, if you do not pass variable_id. (optional)</param>
         /// <param name="botId">Bot ID; required parameter and passed with the variable_name parameter, if you do not pass variable_id. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact. (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ContactsGetByVariableGetAsyncWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsReceived>> ContactsGetByVariableGetAsyncWithHttpInfo (string variableValue, string variableId = null, string variableName = null, string botId = null)
         {
             // verify the required parameter 'variableValue' is set
             if (variableValue == null)
@@ -2108,8 +2108,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2121,9 +2121,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ContactsReceived>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2001) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ContactsReceived) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsReceived)));
         }
 
         /// <summary>
@@ -2132,9 +2132,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse200</returns>
-        public InlineResponse200 ContactsGetGet (string id)
+        public ContactReceived ContactsGetGet (string id)
         {
-             ApiResponse<InlineResponse200> localVarResponse = ContactsGetGetWithHttpInfo(id);
+             ApiResponse<ContactReceived> localVarResponse = ContactsGetGetWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2144,7 +2144,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > ContactsGetGetWithHttpInfo (string id)
+        public ApiResponse< ContactReceived > ContactsGetGetWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2181,8 +2181,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2194,9 +2194,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<ContactReceived>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (ContactReceived) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactReceived)));
         }
 
         /// <summary>
@@ -2205,9 +2205,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> ContactsGetGetAsync (string id)
+        public async System.Threading.Tasks.Task<ContactReceived> ContactsGetGetAsync (string id)
         {
-             ApiResponse<InlineResponse200> localVarResponse = await ContactsGetGetAsyncWithHttpInfo(id);
+             ApiResponse<ContactReceived> localVarResponse = await ContactsGetGetAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2218,7 +2218,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Contact ID. Can be obtained with a contact search by tag or variable. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ContactsGetGetAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactReceived>> ContactsGetGetAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2255,8 +2255,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2268,9 +2268,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<ContactReceived>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse200) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (ContactReceived) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactReceived)));
         }
 
         /// <summary>
@@ -2328,8 +2328,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2402,8 +2402,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2426,9 +2426,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 ContactsMarkReadPut (string contactId = null)
+        public MarkReadResult ContactsMarkReadPut (string contactId = null)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = ContactsMarkReadPutWithHttpInfo(contactId);
+             ApiResponse<MarkReadResult> localVarResponse = ContactsMarkReadPutWithHttpInfo(contactId);
              return localVarResponse.Data;
         }
 
@@ -2438,7 +2438,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > ContactsMarkReadPutWithHttpInfo (string contactId = null)
+        public ApiResponse< MarkReadResult > ContactsMarkReadPutWithHttpInfo (string contactId = null)
         {
 
             var localVarPath = "/contacts/mark-read";
@@ -2472,8 +2472,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2485,9 +2485,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<MarkReadResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2002) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (MarkReadResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MarkReadResult)));
         }
 
         /// <summary>
@@ -2496,9 +2496,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> ContactsMarkReadPutAsync (string contactId = null)
+        public async System.Threading.Tasks.Task<MarkReadResult> ContactsMarkReadPutAsync (string contactId = null)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await ContactsMarkReadPutAsyncWithHttpInfo(contactId);
+             ApiResponse<MarkReadResult> localVarResponse = await ContactsMarkReadPutAsyncWithHttpInfo(contactId);
              return localVarResponse.Data;
 
         }
@@ -2509,7 +2509,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">Contact’s ID for set unread count as 0 (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ContactsMarkReadPutAsyncWithHttpInfo (string contactId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MarkReadResult>> ContactsMarkReadPutAsyncWithHttpInfo (string contactId = null)
         {
 
             var localVarPath = "/contacts/mark-read";
@@ -2543,8 +2543,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2556,9 +2556,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<MarkReadResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2002) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (MarkReadResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MarkReadResult)));
         }
 
         /// <summary>
@@ -2624,8 +2624,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2706,8 +2706,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2787,8 +2787,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2869,8 +2869,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2950,8 +2950,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3032,8 +3032,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3113,8 +3113,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3141,7 +3141,7 @@ namespace SendPulse.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
-		public async System.Threading.Tasks.Task<SuccessResponse> ContactsSetTagPostAsync (ContactsSetTagBody body)
+        public async System.Threading.Tasks.Task<SuccessResponse> ContactsSetTagPostAsync (ContactsSetTagBody body)
         {
              ApiResponse<SuccessResponse> localVarResponse = await ContactsSetTagPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -3199,8 +3199,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3280,8 +3280,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) this.Configuration.ApiClient.CallApi(localVarPath,
+             localVarResponse = (RestResponse
+            ) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3362,8 +3362,8 @@ namespace SendPulse.Api
 
             // make the HTTP request
             RestResponse
-			 localVarResponse = (RestResponse
-			) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+             localVarResponse = (RestResponse
+            ) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 

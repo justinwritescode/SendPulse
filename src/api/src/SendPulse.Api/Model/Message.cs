@@ -1,7 +1,7 @@
-/* 
+/*
  * Telegram service API
  *
- * Using the API for Telegram chatbots, you can integrate your system with SendPulse’s chatbots service and get detailed information about your account, bots, subscribers, variables, flows, and chats. You can also create campaigns, launch flows, assign and remove variables and tags.               On the right, there is a button for authorizing requests made on this page. Click “Authorize,” then insert the ID and Secret from your account.               To perform a request directly from the page, click the \"Try it out\" button within each method block. Then fill in input fields if any (for URL parameters, the description is right below the URL request; for body parameters, the description is under the “Scheme” button to the right of the example), and click “Run.” You'll find the server response and description of received parameters below.         
+ * Using the API for Telegram chatbots, you can integrate your system with SendPulse’s chatbots service and get detailed information about your account, bots, subscribers, variables, flows, and chats. You can also create campaigns, launch flows, assign and remove variables and tags.               On the right, there is a button for authorizing requests made on this page. Click “Authorize,” then insert the ID and Secret from your account.               To perform a request directly from the page, click the \"Try it out\" button within each method block. Then fill in input fields if any (for URL parameters, the description is right below the URL request; for body parameters, the description is under the “Scheme” button to the right of the example), and click “Run.” You'll find the server response and description of received parameters below.
  *
  * OpenAPI spec version: 1.0.0
  * Contact: justin@justinwritescode.com
@@ -30,7 +30,7 @@ namespace SendPulse.Api.Model
         internal partial class Message :  IEquatable<Message>, IValidatableObject
     {
         /// <summary>
-        ///                      * &#x60;1&#x60; - in                      * &#x60;2&#x60; - out                  
+        ///                      * &#x60;1&#x60; - in                      * &#x60;2&#x60; - out
         /// </summary>
         /// <value>                     * &#x60;1&#x60; - in                      * &#x60;2&#x60; - out                  </value>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -47,13 +47,13 @@ namespace SendPulse.Api.Model
             [EnumMember(Value = "2")]
             NUMBER_2 = 2        }
         /// <summary>
-        ///                      * &#x60;1&#x60; - in                      * &#x60;2&#x60; - out                  
+        ///                      * &#x60;1&#x60; - in                      * &#x60;2&#x60; - out
         /// </summary>
         /// <value>                     * &#x60;1&#x60; - in                      * &#x60;2&#x60; - out                  </value>
         [DataMember(Name="direction", EmitDefaultValue=true)]
         public DirectionEnum? Direction { get; set; }
         /// <summary>
-        ///                      * &#x60;1&#x60; - new                  
+        ///                      * &#x60;1&#x60; - new
         /// </summary>
         /// <value>                     * &#x60;1&#x60; - new                  </value>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -65,7 +65,7 @@ namespace SendPulse.Api.Model
             [EnumMember(Value = "1")]
             NUMBER_1 = 1        }
         /// <summary>
-        ///                      * &#x60;1&#x60; - new                  
+        ///                      * &#x60;1&#x60; - new
         /// </summary>
         /// <value>                     * &#x60;1&#x60; - new                  </value>
         [DataMember(Name="status", EmitDefaultValue=true)]
@@ -92,7 +92,7 @@ namespace SendPulse.Api.Model
             this.Status = status;
             this.CreatedAt = createdAt;
         }
-        
+
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
@@ -151,7 +151,7 @@ namespace SendPulse.Api.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -181,42 +181,42 @@ namespace SendPulse.Api.Model
             if (input == null)
                 return false;
 
-            return 
+            return
                 (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
+                ) &&
                 (
                     this.ContactId == input.ContactId ||
                     (this.ContactId != null &&
                     this.ContactId.Equals(input.ContactId))
-                ) && 
+                ) &&
                 (
                     this.BotId == input.BotId ||
                     (this.BotId != null &&
                     this.BotId.Equals(input.BotId))
-                ) && 
+                ) &&
                 (
                     this.CampaignId == input.CampaignId ||
                     (this.CampaignId != null &&
                     this.CampaignId.Equals(input.CampaignId))
-                ) && 
+                ) &&
                 (
                     this.Data == input.Data ||
                     (this.Data != null &&
                     this.Data.Equals(input.Data))
-                ) && 
+                ) &&
                 (
                     this.Direction == input.Direction ||
                     (this.Direction != null &&
                     this.Direction.Equals(input.Direction))
-                ) && 
+                ) &&
                 (
                     this.Status == input.Status ||
                     (this.Status != null &&
                     this.Status.Equals(input.Status))
-                ) && 
+                ) &&
                 (
                     this.CreatedAt == input.CreatedAt ||
                     (this.CreatedAt != null &&

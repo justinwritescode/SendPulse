@@ -11,10 +11,10 @@
 -->
 
 <Project>
-	<PropertyGroup>
-		<NoWarn>$(NoWarn);CS8600;CS8620;CS8714;CS8714;CS8604;CS8603;CS8618;CS8625;CS8602;CS8765;CS8767;</NoWarn>
-		<InheritedDirectoryBuildProps>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</InheritedDirectoryBuildProps>
-	</PropertyGroup>
-	<Import Project="$(InheritedDirectoryBuildProps)" Condition="Exists('$(InheritedDirectoryBuildProps)')" />
+    <PropertyGroup>
+        <NoWarn>$(NoWarn);CS8600;CS8620;CS8714;CS8714;CS8604;CS8603;CS8618;CS8625;CS8602;CS8765;CS8767;</NoWarn>
+        <InheritedDirectoryBuildProps>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</InheritedDirectoryBuildProps>
+    </PropertyGroup>
+    <Import Project="$(InheritedDirectoryBuildProps)" Condition="Exists('$(InheritedDirectoryBuildProps)')" />
   <Import Project="./Directory.Build/*.props" />
 </Project>

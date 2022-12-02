@@ -14,5 +14,5 @@ namespace JustinWritesCode.SendPulse.Identity;
 
 public static class ClaimTypes
 {
-
+    public static readonly ClaimType SendPulseContactId = new ClaimType("SendPulseContactId", "SendPulse Contact Id");
 }

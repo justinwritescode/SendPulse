@@ -32,7 +32,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 FlowsGet (string botId);
+        GetFlowsByBotResponse FlowsGet (string botId);
 
         /// <summary>
         /// Get a list of flows
@@ -43,7 +43,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> FlowsGetWithHttpInfo (string botId);
+        ApiResponse<GetFlowsByBotResponse> FlowsGetWithHttpInfo (string botId);
         /// <summary>
         /// Run a flow by trigger keywords
         /// </summary>
@@ -97,7 +97,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> FlowsGetAsync (string botId);
+        System.Threading.Tasks.Task<GetFlowsByBotResponse> FlowsGetAsync (string botId);
 
         /// <summary>
         /// Get a list of flows
@@ -108,7 +108,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> FlowsGetAsyncWithHttpInfo (string botId);
+        System.Threading.Tasks.Task<ApiResponse<GetFlowsByBotResponse>> FlowsGetAsyncWithHttpInfo (string botId);
         /// <summary>
         /// Run a flow by trigger keywords
         /// </summary>
@@ -268,9 +268,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 FlowsGet (string botId)
+        public GetFlowsByBotResponse FlowsGet (string botId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = FlowsGetWithHttpInfo(botId);
+             ApiResponse<GetFlowsByBotResponse> localVarResponse = FlowsGetWithHttpInfo(botId);
              return localVarResponse.Data;
         }
 
@@ -280,7 +280,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > FlowsGetWithHttpInfo (string botId)
+        public ApiResponse< GetFlowsByBotResponse > FlowsGetWithHttpInfo (string botId)
         {
             // verify the required parameter 'botId' is set
             if (botId == null)
@@ -328,9 +328,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<GetFlowsByBotResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2003) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (GetFlowsByBotResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFlowsByBotResponse)));
         }
 
         /// <summary>
@@ -339,9 +339,9 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> FlowsGetAsync (string botId)
+        public async System.Threading.Tasks.Task<GetFlowsByBotResponse> FlowsGetAsync (string botId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await FlowsGetAsyncWithHttpInfo(botId);
+             ApiResponse<GetFlowsByBotResponse> localVarResponse = await FlowsGetAsyncWithHttpInfo(botId);
              return localVarResponse.Data;
 
         }
@@ -352,7 +352,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> FlowsGetAsyncWithHttpInfo (string botId)
+        public async System.Threading.Tasks.Task<ApiResponse<GetFlowsByBotResponse>> FlowsGetAsyncWithHttpInfo (string botId)
         {
             // verify the required parameter 'botId' is set
             if (botId == null)
@@ -400,9 +400,9 @@ namespace SendPulse.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<GetFlowsByBotResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (InlineResponse2003) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (GetFlowsByBotResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFlowsByBotResponse)));
         }
 
         /// <summary>

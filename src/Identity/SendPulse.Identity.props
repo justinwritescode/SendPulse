@@ -11,10 +11,13 @@
 -->
 
 <Project>
-	<ItemGroup>
-		<Using Include="JustinWritesCode.SendPulse.Identity.Constants" Static="true" />
-		<Using Include="JustinWritesCode.SendPulse.Identity.Constants.Uris" Static="true" />
-		<Using Include="JustinWritesCode.SendPulse.Identity.Constants.Strings" Static="true" />
-		<Using Include="JustinWritesCode.SendPulse.Identity.Constants.UriFragments" Static="true" />
-	</ItemGroup>
+    <ItemGroup>
+        <Using Include="JustinWritesCode.SendPulse.Identity.Constants" Static="true" />
+        <Using Include="JustinWritesCode.SendPulse.Identity.Constants.Uris" Static="true" />
+        <Using Include="JustinWritesCode.SendPulse.Identity.Constants.UriStrings" Static="true" />
+        <Using Include="JustinWritesCode.SendPulse.Identity.Constants.UriFragments" Static="true" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="JustinWritesCode.Identity.Claims" />
+    </ItemGroup>
 </Project>
