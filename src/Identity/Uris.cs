@@ -12,13 +12,14 @@ using System;
  */
 
 namespace JustinWritesCode.SendPulse.Identity;
+using static JustinWritesCode.SendPulse.Identity.Constants;
 
 public static partial class Constants
 {
     public static partial class Uris
     {
-        public static readonly Uri SendPulseApiBaseUri = new (Strings.SendPulseApiBaseUriString);
-        public static readonly Uri SendPulseOAuth2Uri = new(Strings.SendPulseOAuth2UriString);
-        
+        public static readonly Uri SendPulseApiBaseUri = new (UriStrings.SendPulseApiBaseUriString);
+        public static readonly Uri SendPulseOAuth2Uri = new(UriStrings.SendPulseOAuth2UriString);
+
     }
 }

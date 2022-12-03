@@ -1,0 +1,19 @@
+<!--
+ * Sync.csproj
+ * 
+ *   Created: 2022-12-02-08:34:39
+ *   Modified: 2022-12-02-08:34:39
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+</Project>

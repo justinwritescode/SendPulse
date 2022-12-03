@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sync", "Sync.csproj", "{43898AA4-BB12-41D7-BE1E-9B3374A5F934}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BF88DC0E-733E-4BA4-8D40-26F66410C5BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Local|Any CPU.Build.0 = Local|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934}.Testing|Any CPU.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43898AA4-BB12-41D7-BE1E-9B3374A5F934} = {BF88DC0E-733E-4BA4-8D40-26F66410C5BC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {730EB8B7-9F85-436E-B72D-EF30100665FB}
+	EndGlobalSection
+EndGlobal

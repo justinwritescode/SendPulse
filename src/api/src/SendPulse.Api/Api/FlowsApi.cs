@@ -32,7 +32,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2003</returns>
-        GetFlowsByBotResponse FlowsGet (string botId);
+        GetFlowsByBotResponse GetFlowsByBot (string botId);
 
         /// <summary>
         /// Get a list of flows
@@ -268,7 +268,7 @@ namespace SendPulse.Api
         /// <exception cref="SendPulse.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botId">Bot ID. Can be obtained with a method of getting a list of bots. You can also find it in your account in the address bar of a chat window with the desired contact.</param>
         /// <returns>InlineResponse2003</returns>
-        public GetFlowsByBotResponse FlowsGet (string botId)
+        public GetFlowsByBotResponse GetFlowsByBot (string botId)
         {
              ApiResponse<GetFlowsByBotResponse> localVarResponse = FlowsGetWithHttpInfo(botId);
              return localVarResponse.Data;

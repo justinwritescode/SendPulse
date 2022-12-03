@@ -11,6 +11,7 @@
  */
 
 namespace JustinWritesCode.SendPulse.Identity;
+using JustinWritesCode.Identity.Claims;
 
 public static class ClaimTypes
 {

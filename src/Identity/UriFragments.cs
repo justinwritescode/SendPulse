@@ -25,6 +25,10 @@ public static partial class Constants
         /// <value>contact_id/</value>
         public const string ContactIdUriFragment = "contact_id/";
 
+        /// <summary>A fragment for representing the SendPulse Telegram chatbot API</summary>
+        /// <value>telegram/</value>
+        public const string TelegramUriFragment = "telegram/";
+
 
         // public const string Telegram = "telegram/";
         // public const string TelegramBots = "bots/";

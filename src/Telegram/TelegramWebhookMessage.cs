@@ -10,7 +10,7 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode.Telegram
+namespace SendPulse.Telegram
 {
     using System;
     using System.Collections.Generic;
@@ -91,13 +91,13 @@ namespace JustinWritesCode.Telegram
         public object Contact { get; set; }
 
         [JsonProperty("message", NullValueHandling = NullValueHandling.Ignore)]
-        public MessageClass Message { get; set; }
+        public Message Message { get; set; }
 
         [JsonProperty("message_id", NullValueHandling = NullValueHandling.Ignore)]
         public long? MessageId { get; set; }
     }
 
-    public partial class MessageClass
+    public partial class Message
     {
         [JsonProperty("caption", NullValueHandling = NullValueHandling.Ignore)]
         public string Caption { get; set; }

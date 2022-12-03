@@ -13,6 +13,7 @@ using Microsoft.VisualBasic;
  */
 
 namespace JustinWritesCode.SendPulse.Identity;
+using static JustinWritesCode.SendPulse.Identity.Constants.UriFragments;
 
 public static partial class Constants
 {
@@ -22,16 +23,20 @@ public static partial class Constants
         /// <value>https://api.sendpulse.com/</value>
         public const string SendPulseApiBaseUriString = "https://api.sendpulse.com/";
 
+        /// <summary>The base URI for the SendPulse API.</summary>
+        /// <value><inheritdoc cref="SendPulseApiBaseUriString" /><inheritdoc cref="TelegramUriFragment" /></value>
+        public const string SendPulseTelegramApiBaseUriString = SendPulseApiBaseUriString + TelegramUriFragment;
+
         /// <summary>The base URI for the SendPulse domain.</summary>
         /// <value>https://sendpulse.com/</value>
         public const string SendPulseBaseUriString = "https://sendpulse.com/";
 
-        /// <summary>The base URI for the SendPulse domain.</summary>
-        /// <value><inheritdoc cref="SendPulseBaseUriString" path="/value/node()" /><inheritdoc cref="IdentityUriFragment" path="/value/node()" /></value>
+        /// <summary>The base URI for the SendPulse identity domain.</summary>
+        /// <value><inheritdoc cref="SendPulseBaseUriString" /><inheritdoc cref="IdentityUriFragment" /></value>
         public const string SendPulseIdentityUriString = SendPulseBaseUriString + IdentityUriFragment;
 
         /// <summary>The base URI for the SendPulse domain.</summary>
-        /// <value><inheritdoc cref="SendPulseIdentityUriString" path="/value/node()" /><inheritdoc cref="ContactIdUriFragment" path="/value/node()" /></value>
+        /// <value><inheritdoc cref="SendPulseIdentityUriString" /><inheritdoc cref="ContactIdUriFragment"  /></value>
         public const string SendPulseIContactIdUriString = SendPulseIdentityUriString + ContactIdUriFragment;
 
         /// <summary>
