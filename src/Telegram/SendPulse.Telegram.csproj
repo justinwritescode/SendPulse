@@ -12,10 +12,14 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AnyOf.Usings" />
+    <PackageReference Include="JustinWritesCode.Primitives" />
     <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="System.Text.Json" />
+    <PackageReference Include="System.Text.Json.Usings" />
   </ItemGroup>
 </Project>

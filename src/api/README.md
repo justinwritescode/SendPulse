@@ -39,7 +39,7 @@ Then include the DLL (under the `bin` folder) in the C# project, and use the nam
 ```csharp
 using SendPulse.Api;
 using SendPulse.Api.Client;
-using SendPulse.Api.Model;
+using SendPulse.Api.Models;
 ```
 <a name="packaging"></a>
 ## Packaging
@@ -62,7 +62,7 @@ using System;
 using System.Diagnostics;
 using SendPulse.Api;
 using SendPulse.Api.Client;
-using SendPulse.Api.Model;
+using SendPulse.Api.Models;
 
 namespace Example
 {

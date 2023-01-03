@@ -10,24 +10,23 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode.SendPulse.Identity;
+namespace SendPulse.Identity;
 
-public static partial class Constants
+public static partial class ClaimTypes
 {
-
     public static partial class UriFragments
     {
         /// <summary>A fragment for identity claims</summary>
         /// <value>identity/</value>
-        public const string IdentityUriFragment = "identity/";
+        public const string Identity = "identity/";
 
         /// <summary>A fragment for representing a SendPulse contact ID</summary>
         /// <value>contact_id/</value>
-        public const string ContactIdUriFragment = "contact_id/";
+        public const string ContactId = "contact_id/";
 
         /// <summary>A fragment for representing the SendPulse Telegram chatbot API</summary>
         /// <value>telegram/</value>
-        public const string TelegramUriFragment = "telegram/";
+        public const string Telegram = "telegram/";
 
 
         // public const string Telegram = "telegram/";

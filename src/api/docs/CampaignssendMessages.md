@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.CampaignssendMessages
+# SendPulse.Api.Models.CampaignssendMessages
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **Message** | [**CampaignssendMessage**](CampaignssendMessage.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

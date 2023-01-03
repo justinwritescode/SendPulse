@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.TriggerExecution
+# SendPulse.Api.Models.TriggerExecution
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **Units** | **int?** |                          * &#x60;1&#x60; - minutes                          * &#x60;2&#x60; - hours                          * &#x60;3&#x60; - days                       | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

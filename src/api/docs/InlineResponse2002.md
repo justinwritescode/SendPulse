@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.InlineResponse2002
+# SendPulse.Api.Models.InlineResponse2002
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,4 +6,3 @@ Name | Type | Description | Notes
 **Count** | **int?** | Contact messages count marked as read | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

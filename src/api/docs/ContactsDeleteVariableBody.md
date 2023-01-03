@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.ContactsDeleteVariableBody
+# SendPulse.Api.Models.ContactsDeleteVariableBody
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **VariableName** | **string** | Name of the variable | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

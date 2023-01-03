@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.ContactChannelData
+# SendPulse.Api.Models.ContactChannelData
 ## Properties
 
 Name | Type | Description | Notes
@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **LanguageCode** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

@@ -21,7 +21,7 @@ using System;
 using System.Diagnostics;
 using SendPulse.Api;
 using SendPulse.Api.Client;
-using SendPulse.Api.Model;
+using SendPulse.Api.Models;
 
 namespace Example
 {
@@ -84,7 +84,7 @@ using System;
 using System.Diagnostics;
 using SendPulse.Api;
 using SendPulse.Api.Client;
-using SendPulse.Api.Model;
+using SendPulse.Api.Models;
 
 namespace Example
 {

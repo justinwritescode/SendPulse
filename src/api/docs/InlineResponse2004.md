@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.InlineResponse2004
+# SendPulse.Api.Models.InlineResponse2004
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **Data** | [**Trigger**](Trigger.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

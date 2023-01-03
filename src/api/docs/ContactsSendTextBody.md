@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.ContactsSendTextBody
+# SendPulse.Api.Models.ContactsSendTextBody
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **Text** | **string** | The content of the text message. You can add text with emoji of up to 1024 unicode characters. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

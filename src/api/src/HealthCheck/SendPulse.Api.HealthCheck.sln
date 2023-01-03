@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendPulse.Api.HealthCheck", "SendPulse.Api.HealthCheck.csproj", "{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E22E0E27-0CA9-470E-8055-7CF76E3C6CBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Local|Any CPU.Build.0 = Local|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB}.Testing|Any CPU.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DBE30E7E-2544-4AC1-8A83-0C6972BD16BB} = {E22E0E27-0CA9-470E-8055-7CF76E3C6CBA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3039730E-3D2B-4E4A-8120-EB96B981868B}
+	EndGlobalSection
+EndGlobal

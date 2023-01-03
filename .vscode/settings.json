@@ -3,5 +3,38 @@
         "activityBar.background": "#0D3516",
         "titleBar.activeBackground": "#124A1F",
         "titleBar.activeForeground": "#F5FDF7"
-    }
+    },
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "<<filename>>",
+                "",
+                "  Created: <<filecreated('YYYY-MM-DD-hh:mm:ss')>>",
+                "  Modified: <<dateformat('YYYY-MM-DD-hh:mm:ss')>>",
+                "",
+                "  Using the API for Telegram chatbots, you can integrate your ",
+                "  system with SendPulse’s chatbots service and get detailed ",
+                "  information about your account, bots, subscribers, variables,",
+                "  flows, and chats. You can also create campaigns, launch flows, ",
+                "  assign and remove variables and tags.",
+                "",
+                "  Author: <<author>> <<<authoremail>>>",
+                "  ",
+                "  Copyright © <<yeartoyear(<<projectCreationYear>>, now)>> <<copyrightHolder>>, All Rights Reserved",
+                "     License: <<spdxid>> (<<licenseurl>>)"
+            ]
+        },
+        {
+            "language": "markdown",
+            "template": [
+                "author: <<author>>",
+                "author_email: <<authoremail>>",
+                "title: <<filename>>",
+                "modified: <<dateformat('YYYY-MM-DD-hh:mm:ss')>>",
+                "created: <<filecreated('YYYY-MM-DD-hh:mm:ss')>>",
+                "license: <<spdxid>>"
+            ]
+        }
+    ]
 }

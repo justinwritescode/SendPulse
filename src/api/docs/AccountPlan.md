@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.AccountPlan
+# SendPulse.Api.Models.AccountPlan
 ## Properties
 
 Name | Type | Description | Notes
@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **ExpiredAt** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

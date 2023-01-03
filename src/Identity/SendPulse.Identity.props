@@ -12,12 +12,14 @@
 
 <Project>
     <ItemGroup>
-        <Using Include="JustinWritesCode.SendPulse.Identity.Constants" Static="true" />
-        <Using Include="JustinWritesCode.SendPulse.Identity.Constants.Uris" Static="true" />
-        <Using Include="JustinWritesCode.SendPulse.Identity.Constants.UriStrings" Static="true" />
-        <Using Include="JustinWritesCode.SendPulse.Identity.Constants.UriFragments" Static="true" />
+        <Using Include="SendPulse.Identity" />
+        <Using Include="SendPulse.Identity.ClaimTypes.Uris" Alias="SendPulseIdUris" />
+        <Using Include="SendPulse.Identity.ClaimTypes" Alias="SendPulseId" />
+        <Using Include="SendPulse.Identity.ClaimTypes.UriFragments" Alias="SendPulseIdFragments" />
+        <!-- <Using Include="JustinWritesCode.Abstractions" /> -->
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="JustinWritesCode.Identity.Claims" />
+        <!-- <PackageReference Include="JustinWritesCode.Identity.Claims" /> -->
+        <!-- <PackageReference Include="JustinWritesCode.Abstractions" /> -->
     </ItemGroup>
 </Project>

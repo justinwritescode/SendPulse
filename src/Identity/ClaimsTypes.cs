@@ -10,10 +10,9 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode.SendPulse.Identity;
-using JustinWritesCode.Identity.Claims;
+namespace SendPulse.Identity;
 
-public static class ClaimTypes
-{
-    public static readonly ClaimType SendPulseContactId = new ClaimType("SendPulseContactId", "SendPulse Contact Id");
-}
+// public static class ClaimTypes
+// {
+//     public static readonly JustinWritesCode.Identity.Claims.ClaimType SendPulseContactId = new("SendPulseContactId", "SendPulse Contact Id");
+// }

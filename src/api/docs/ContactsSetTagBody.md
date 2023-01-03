@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.ContactsSetTagBody
+# SendPulse.Api.Models.ContactsSetTagBody
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **Tags** | **Collection&lt;string&gt;** | List of tags to assign to the contact | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

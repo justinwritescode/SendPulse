@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.CampaignsSendBody
+# SendPulse.Api.Models.CampaignsSendBody
 ## Properties
 
 Name | Type | Description | Notes
@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **Messages** | [**Collection&lt;CampaignssendMessages&gt;**](CampaignssendMessages.md) | Message to send, specifying the type and content of the campaign | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

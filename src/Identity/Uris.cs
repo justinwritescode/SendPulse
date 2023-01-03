@@ -1,4 +1,3 @@
-using System;
 /*
  * Uris.cs
  *
@@ -11,15 +10,15 @@ using System;
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode.SendPulse.Identity;
-using static JustinWritesCode.SendPulse.Identity.Constants;
+namespace SendPulse.Identity;
 
-public static partial class Constants
+public static partial class ClaimTypes
 {
     public static partial class Uris
     {
-        public static readonly Uri SendPulseApiBaseUri = new (UriStrings.SendPulseApiBaseUriString);
-        public static readonly Uri SendPulseOAuth2Uri = new(UriStrings.SendPulseOAuth2UriString);
-
+        /// <inheritdoc cref="ObjectId.BaseUri"/>
+        public static readonly uri BaseUri = new(SendPulseId.ApiBaseUri);
+        /// <inheritdoc cref="ObjectId.OAuth2EncpointUri"/>
+        public static readonly uri OAuth2EncpointUri = new(SendPulseId.OAuth2EncpointUri);
     }
 }

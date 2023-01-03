@@ -1,4 +1,4 @@
-# SendPulse.Api.Model.BotCommandsMenu
+# SendPulse.Api.Models.BotCommandsMenu
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **Commands** | [**Collection&lt;BotCommandsMenuCommands&gt;**](BotCommandsMenuCommands.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
