@@ -6,7 +6,7 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
@@ -57,6 +57,9 @@ public static class DI
         builder.Services.AddSingleton(config);
         builder.Services.AddTransient<SendPulse.Api.Client.Abstractions.IApiClient>(
             y => y.GetService<Configuration>().CreateApiClient()
+        );
+        builder.Services.AddTransient<SendPulse.Api.Abstractions.IAccountApi>(
+            y => new AccountApi(y.GetService<Configuration>())
         );
         builder.Services.AddTransient<SendPulse.Api.Abstractions.IBotsApi>(
             y => new BotsApi(y.GetService<Configuration>())
