@@ -16,9 +16,9 @@ public static partial class ClaimTypes
 {
     public static partial class Uris
     {
-        /// <inheritdoc cref="ObjectId.BaseUri"/>
+        /// <inheritdoc cref="SendPulseId.BaseUri"/>
         public static readonly uri BaseUri = new(SendPulseId.ApiBaseUri);
-        /// <inheritdoc cref="ObjectId.OAuth2EncpointUri"/>
+        /// <inheritdoc cref="SendPulseId.OAuth2EncpointUri"/>
         public static readonly uri OAuth2EncpointUri = new(SendPulseId.OAuth2EncpointUri);
     }
 }
